@@ -1,4 +1,5 @@
 function isoWeek(date) {
+  if (!date || !(date instanceof Date)) return 0;
   const d = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
   const dayNum = d.getUTCDay() || 7;
   d.setUTCDate(d.getUTCDate() + 4 - dayNum);
@@ -36,6 +37,7 @@ function onOpen() {
 
   ss.getSheets().forEach(sheet => {
     const lastRow = sheet.getLastRow();
+    if (lastRow < 1) return;
 
     // Näytä ensin kaikki rivit jotta edellinen tila ei jää päälle
     sheet.showRows(1, lastRow);
