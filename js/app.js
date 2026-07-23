@@ -202,7 +202,7 @@ function shiftWeek(n) {
   const d = new Date(currentWeekMonday);
   d.setDate(d.getDate() + n * 7);
   currentWeekMonday = d;
-  clearWeekFromURL();
+  updateURL();
   loadWeek();
 }
 

@@ -40,7 +40,7 @@ function onOpen() {
     // Näytä ensin kaikki rivit jotta edellinen tila ei jää päälle
     sheet.showRows(1, lastRow);
 
-    const data        = sheet.getRange(1, 1, lastRow, 1).getValues();
+    const data        = sheet.getRange(1, 1, lastRow, 1).getDisplayValues();
     const currentWeek = isoWeek(new Date());
     const keyShort    = `${new Date().getDate()}.${new Date().getMonth() + 1}.`;
 
@@ -48,7 +48,7 @@ function onOpen() {
     let currentWeekRow     = -1;
 
     for (let i = 0; i < data.length; i++) {
-      const val = String(data[i][0]).trim();
+      const val = data[i][0].trim();
 
       // Etsi nykyisen viikon "Viikko X" -rivi viikkonumerolla
       const wm = val.match(/^Viikko\s+(\d+)/i);
@@ -307,6 +307,9 @@ function populateData() {
 
     sheet.setFrozenRows(1);
     sheet.setColumnWidths(1, 6, 250);
+
+    const maxCols = sheet.getMaxColumns();
+    if (maxCols > 6) sheet.deleteColumns(7, maxCols - 6);
   }
 
   ss.toast(
