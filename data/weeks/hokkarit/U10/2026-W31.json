@@ -3,40 +3,42 @@
     "monday": {
       "title": "Maanantai",
       "tasks": [
-        "Kyykyt 2 × 8",
-        "Hyppynarua 1 min"
+        "Kyykyt 3 × 15",
+        "Hyppynarua 3 min",
+        "Punnerrukset 2 × 10"
       ]
     },
     "tuesday": {
       "title": "Tiistai",
       "tasks": [
-        "Lepopäivä"
+        "Lepopäivä – palaudu hyvin"
       ]
     },
     "wednesday": {
       "title": "Keskiviikko",
       "tasks": [
-        "Mailankäsittely 3 min: rysty ja käänto",
-        "Tasapaino: seiso yhdellä jalalla 20 sek"
+        "Mailankäsittely 10 min: rysty, käänto ja taaksepäin",
+        "Vatsalihakset: 3 × 15 rutistusta"
       ]
     },
     "thursday": {
       "title": "Torstai",
       "tasks": [
-        "Lepopäivä"
+        "Juoksu: 5 min lämmittely + 6 × 30 sek vauhdikas",
+        "Venyttely lonkat ja reidet 10 min"
       ]
     },
     "friday": {
       "title": "Perjantai",
       "tasks": [
-        "Juoksu 10 min",
-        "Venyttely jalat 5 min"
+        "Askelkyykyt 2 × 10 kummallakin jalalla",
+        "Lankku 3 × 30 sek"
       ]
     },
     "saturday": {
       "title": "Lauantai",
       "tasks": [
-        "Pyöräily tai leikkiä ulkona 20 min"
+        "Aerobinen: pyöräily tai uinti 40 min"
       ]
     },
     "sunday": {

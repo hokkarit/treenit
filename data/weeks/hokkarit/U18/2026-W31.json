@@ -3,40 +3,50 @@
     "monday": {
       "title": "Maanantai",
       "tasks": [
-        "Hypi tasajalkaa 50 kertaa",
-        "Heitä pallo seinään ja ota kiinni 2 min"
+        "Kyykyt 4 × 20",
+        "Askelkyykyt 3 × 15 kummallakin",
+        "Nordic hamstring 3 × 8",
+        "Hyppynarua 5 min"
       ]
     },
     "tuesday": {
       "title": "Tiistai",
       "tasks": [
-        "Lepopäivä"
+        "Mailankäsittely 15 min: nopeat siirrot, taaksepäin ja harhautukset",
+        "Liikkuvuus: lonkat, reidet, olkapäät 15 min"
       ]
     },
     "wednesday": {
       "title": "Keskiviikko",
       "tasks": [
-        "Mailankäsittely: siirrä kiekko puolelta toiselle 2 min",
-        "Tee 5 kuperkeikkaa"
+        "Punnerrukset 4 × 20",
+        "Dipsit 4 × 12",
+        "Vatsalihas: 4 × 20 rutistusta",
+        "Sivulankku 3 × 45 sek"
       ]
     },
     "thursday": {
       "title": "Torstai",
       "tasks": [
-        "Lepopäivä"
+        "Intervallijuoksu: 10 × 30 sek täysillä + 30 sek kävely",
+        "Laukaisuharjoitus: 50 laukausta seinään tai maaliin",
+        "Venyttely 10 min"
       ]
     },
     "friday": {
       "title": "Perjantai",
       "tasks": [
-        "Seiso yhdellä jalalla 30 sek, vaihda jalka",
-        "Juokse takapihalla 10 min"
+        "Lankku 4 × 60 sek",
+        "Selkälihakset: 3 × 15",
+        "Hyppykyykyt 4 × 10",
+        "Sivulankku 3 × 45 sek"
       ]
     },
     "saturday": {
       "title": "Lauantai",
       "tasks": [
-        "Pelaa ulkona kavereiden kanssa 30 min"
+        "Aerobinen: pyöräily tai uinti 60 min",
+        "Keskivartalo: lankku 60 sek, sivulankku 45 sek, rutistus 20"
       ]
     },
     "sunday": {
