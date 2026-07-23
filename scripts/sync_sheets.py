@@ -153,7 +153,7 @@ def parse_rows(rows: list) -> tuple[dict, dict]:
             year, month0, day = int(dm2[1]), int(dm2[2]), int(dm2[3])
             d = date(year, month0 + 1, day)
             tasks = []
-            for cell in cells[1:]:
+            for cell in cells[2:]:
                 val = (cell or {}).get('v')
                 if val and isinstance(val, str) and val.strip():
                     tasks.append(parse_task(val.strip()))

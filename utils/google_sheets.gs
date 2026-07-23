@@ -9,84 +9,60 @@ function isoWeek(date) {
 
 function todayKey() {
   const d = new Date();
-  return `${d.getDate()}.${d.getMonth() + 1}.${d.getFullYear()}`;
+  return `${d.getDate()}.${d.getMonth() + 1}.`;
 }
 
-function jumpToToday(sheet) {
-  const key  = todayKey();
-  const data = sheet.getRange(1, 1, sheet.getLastRow(), 1).getValues();
-  for (let i = 0; i < data.length; i++) {
-    if (String(data[i][0]).trim() === key) {
-      sheet.setActiveRange(sheet.getRange(i + 1, 1));
-      return;
-    }
-  }
+function showAllRows() {
+  SpreadsheetApp.getActiveSpreadsheet().getSheets().forEach(sheet => {
+    const lastRow = sheet.getLastRow();
+    if (lastRow > 0) sheet.showRows(1, lastRow);
+  });
+  SpreadsheetApp.getActiveSpreadsheet().toast('Kaikki rivit näkyvissä.', '✓', 3);
 }
 
-// Piilottaa menneet viikot ja merkitsee tämän päivän keltaisella jokaisessa tabissa
 function onOpen() {
-  const ss  = SpreadsheetApp.getActiveSpreadsheet();
-
-  SpreadsheetApp.getUi()
-    .createMenu('📅 Kotitreenit')
-    .addItem('Hyppää tähän päivään', 'goToToday')
+  const ui = SpreadsheetApp.getUi();
+  ui.createMenu('🏒 Hokkari treenit')
     .addItem('Näytä kaikki rivit', 'showAllRows')
     .addToUi();
 
-  const key = todayKey();
+  const ss          = SpreadsheetApp.getActiveSpreadsheet();
+  const key         = todayKey();
+  const currentWeek = isoWeek(new Date());
+
+  ss.toast('Asetetaan tämä päivä kaikille välilehdille…', 'Odota hetki', 60);
 
   ss.getSheets().forEach(sheet => {
     const lastRow = sheet.getLastRow();
-    if (lastRow < 1) return;
+    if (lastRow < 2) return;
 
-    // Näytä ensin kaikki rivit jotta edellinen tila ei jää päälle
-    sheet.showRows(1, lastRow);
-
-    const data        = sheet.getRange(1, 1, lastRow, 1).getDisplayValues();
-    const currentWeek = isoWeek(new Date());
-    const keyShort    = `${new Date().getDate()}.${new Date().getMonth() + 1}.`;
-
-    let todayRow           = -1;
-    let currentWeekRow     = -1;
+    const data = sheet.getRange(1, 1, lastRow, 1).getDisplayValues();
+    let todayRow       = -1;
+    let currentWeekRow = -1;
 
     for (let i = 0; i < data.length; i++) {
       const val = data[i][0].trim();
-
-      // Etsi nykyisen viikon "Viikko X" -rivi viikkonumerolla
-      const wm = val.match(/^Viikko\s+(\d+)/i);
+      const wm  = val.match(/^Viikko\s+(\d+)/i);
       if (wm && parseInt(wm[1]) === currentWeek) currentWeekRow = i + 1;
-
-      // Etsi tämän päivän rivi — tunnistaa "23.7.2026", "23.7." ja "ke 23.7." -muodot
-      if (todayRow < 0 && (val === key || val === keyShort ||
-          val.endsWith(' ' + key) || val.endsWith(' ' + keyShort))) {
-        todayRow = i + 1;
-      }
+      if (todayRow < 0 && val === key) todayRow = i + 1;
     }
 
-    // Piilota kaikki rivit ennen nykyisen viikon otsikkoa
-    if (currentWeekRow > 2) {
-      sheet.hideRows(2, currentWeekRow - 2);
-    }
+    // Show all rows, then hide everything before current week
+    sheet.showRows(1, lastRow);
+    if (currentWeekRow > 2) sheet.hideRows(2, currentWeekRow - 2);
 
-    // Korosta tämä päivä keltaisella
-    if (todayRow > 0) {
-      sheet.getRange(todayRow, 1, 1, 6).setBackground('#fff176').setFontColor('#000000');
-      sheet.setActiveRange(sheet.getRange(todayRow, 1));
-    } else if (currentWeekRow > 0) {
-      sheet.setActiveRange(sheet.getRange(currentWeekRow, 1));
+    // Clear stale yellow from previous day, then paint today yellow
+    const bgs = sheet.getRange(2, 1, lastRow - 1, 6).getBackgrounds();
+    const stale = [];
+    for (let i = 0; i < bgs.length; i++) {
+      if (bgs[i][0].toLowerCase() === '#fff176') stale.push(`A${i + 2}:F${i + 2}`);
     }
+    if (stale.length > 0) sheet.getRangeList(stale).setBackground(null).setFontColor(null);
+    if (todayRow > 0) sheet.getRange(todayRow, 1, 1, 6).setBackground('#fff176').setFontColor('#000000');
+
   });
-}
 
-// Palauttaa kaikki rivit näkyviin aktiivisessa tabissa
-function showAllRows() {
-  const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
-  sheet.showRows(1, sheet.getLastRow());
-}
-
-// Hyppää tämän päivän riville aktiivisessa tabissa
-function goToToday() {
-  jumpToToday(SpreadsheetApp.getActiveSpreadsheet().getActiveSheet());
+  ss.toast('Tämä päivä merkitty keltaisella kaikissa välilehdissä.', '✓ Valmis', 4);
 }
 
 // Harmaannuttaa viikon rivit kun toistoluku valitaan alasvetovalikosta
@@ -276,14 +252,15 @@ function populateData() {
       }
 
       const lookupKey = `${date.getDate()}.${date.getMonth() + 1}.`;
-      const dateStr   = `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`;  // "20.7.2026"
+      const dateStr   = lookupKey;  // "20.7." — no year so sheet works across years
       const dayAbbr = DAY_ABBR[date.getDay()];     // "ma", "ti", ...
       const ch      = teamChallenges[lookupKey] || ['', '', '', ''];
 
       rows.push([dateStr, dayAbbr, ch[0], ch[1], ch[2], ch[3]]);
     }
 
-    sheet.getRange(1, 1, rows.length, 6).setValues(rows).setWrap(true);
+    sheet.getRange(1, 1, rows.length, 6).setValues(rows);
+    sheet.getRange(1, 1, rows.length, 6).setWrap(true);
 
     // Style main header
     sheet.getRange(1, 1, 1, 6)
@@ -291,20 +268,20 @@ function populateData() {
       .setFontColor('#ffffff')
       .setFontWeight('bold');
 
-    // Dropdown "Toista: 1"–"Toista: 52" in col C of each week header row
-    const repeatOptions = Array.from({length: 52}, (_, i) => String(i + 1));
-    const repeatRule = SpreadsheetApp.newDataValidation()
-      .requireValueInList(repeatOptions, true)
-      .setAllowInvalid(true)
-      .build();
+    // Style all week header rows in one batch + add dropdown
+    if (weekRows.length > 0) {
+      const repeatOptions = Array.from({length: 52}, (_, i) => String(i + 1));
+      const repeatRule = SpreadsheetApp.newDataValidation()
+        .requireValueInList(repeatOptions, true)
+        .setAllowInvalid(true)
+        .build();
 
-    // Style week header rows + add dropdown
-    for (const rowIdx of weekRows) {
-      sheet.getRange(rowIdx, 1, 1, 6)
-        .setBackground('#1a2a42')
-        .setFontColor('#4FC3F7')
-        .setFontWeight('bold');
-      sheet.getRange(rowIdx, 6).setDataValidation(repeatRule);
+      const headerRanges = sheet.getRangeList(weekRows.map(r => `A${r}:F${r}`));
+      headerRanges.setBackground('#1a2a42').setFontColor('#4FC3F7').setFontWeight('bold');
+
+      for (const rowIdx of weekRows) {
+        sheet.getRange(rowIdx, 6).setDataValidation(repeatRule);
+      }
     }
 
     sheet.setFrozenRows(1);
@@ -312,6 +289,8 @@ function populateData() {
 
     const maxCols = sheet.getMaxColumns();
     if (maxCols > 6) sheet.deleteColumns(7, maxCols - 6);
+
+    SpreadsheetApp.flush();
   }
 
   ss.toast(

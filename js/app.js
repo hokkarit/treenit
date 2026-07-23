@@ -35,7 +35,7 @@ async function init() {
   const hashParts = location.hash.replace(/^#\//, '').split('/');
   const urlClub = hashParts[0] || null;
   const urlTeam = hashParts[1] ? hashParts[1].toUpperCase() : null;
-  const urlWeek = hashParts[2] ? parseInt(hashParts[2]) : null;
+  const urlWeek = hashParts[2] && /^\d+$/.test(hashParts[2]) ? parseInt(hashParts[2]) : null;
 
   if (urlWeek && urlWeek >= 1 && urlWeek <= 53) {
     currentWeekMonday = mondayOfISOWeek(isoYear(thisWeekMonday()), urlWeek);
@@ -53,7 +53,7 @@ async function init() {
     const parts = location.hash.replace(/^#\//, '').split('/');
     const hClub = parts[0] || null;
     const hTeam = parts[1] ? parts[1].toUpperCase() : null;
-    const hWeek = parts[2] ? parseInt(parts[2]) : null;
+    const hWeek = parts[2] && /^\d+$/.test(parts[2]) ? parseInt(parts[2]) : null;
 
     if (hWeek && hWeek >= 1 && hWeek <= 53) {
       currentWeekMonday = mondayOfISOWeek(isoYear(thisWeekMonday()), hWeek);
@@ -222,6 +222,7 @@ function clearWeekFromURL() {
 async function loadWeek() {
   if (!currentTeam || !currentClub) return;
   const wk = weekKey(currentWeekMonday);
+  updateURL();
 
   const yr = isoYear(currentWeekMonday);
   const yearSuffix = yr !== new Date().getFullYear() ? ` / ${yr}` : '';
@@ -275,7 +276,7 @@ function renderDays(data, wk, repeatedFrom = null) {
     const tasksHtml = tasks.map((task, i) => {
       const taskText  = typeof task === 'string' ? task : task.text;
       const taskInfo  = typeof task === 'object' && task.info  ? task.info  : null;
-      const taskVideo = typeof task === 'object' && task.video ? task.video : null;
+      const taskVideo = typeof task === 'object' && task.video && /^https?:\/\//i.test(task.video) ? task.video : null;
       return `<label class="task-item${saved[i] ? ' done' : ''}">
         <input type="checkbox"${saved[i] ? ' checked' : ''} data-day="${day}" data-idx="${i}" data-week="${wk}">
         <span class="task-content">
