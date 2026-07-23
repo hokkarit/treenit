@@ -3,7 +3,6 @@
     "monday": {
       "title": "Maanantai",
       "tasks": [
-        "ma",
         "Takakyykyt 5 × 5 (raskas)",
         "Askelkyykyt 4 × 12 kummallakin",
         "Nordic hamstring 4 × 8",
@@ -13,7 +12,6 @@
     "tuesday": {
       "title": "Tiistai",
       "tasks": [
-        "ti",
         "Mailankäsittely 20 min täysnopeudella",
         "Liikkuvuus + venyttely 15 min"
       ]
@@ -21,7 +19,6 @@
     "wednesday": {
       "title": "Keskiviikko",
       "tasks": [
-        "ke",
         "Penkkipunnerrus tai dipsit 5 × 8",
         "Leuanveto tai soutu 4 × 8",
         "Vatsalihas: 5 × 25 + lankku 4 × 60 sek",
@@ -31,7 +28,6 @@
     "thursday": {
       "title": "Torstai",
       "tasks": [
-        "to",
         "Sprinttiharjoitus: 8 × 60 m täysillä, 2 min palautus",
         "Laukaisuharjoitus: 80 laukausta",
         "Venyttely + jäähdyttely 15 min"
@@ -40,7 +36,6 @@
     "friday": {
       "title": "Perjantai",
       "tasks": [
-        "pe",
         "Loikat 4 × 30 m, hyppykyykyt 4 × 10, kevennyshypyt 3 × 8",
         "Selkälihakset: 4 × 15",
         "Sivulankku 4 × 55 sek"
@@ -49,7 +44,6 @@
     "saturday": {
       "title": "Lauantai",
       "tasks": [
-        "la",
         "Aerobinen: pyöräily tai uinti 75 min",
         "Keskivartalo: lankku 75 sek, sivulankku 60 sek, rutistus 30"
       ]
@@ -57,7 +51,6 @@
     "sunday": {
       "title": "Sunnuntai",
       "tasks": [
-        "su",
         "Lepopäivä – ravinto ja uni kuntoon"
       ]
     }
