@@ -30,7 +30,6 @@ async function init() {
     clubs = [];
   }
 
-  renderClubSelector();
   setupTeamSelectorEvents();
 
   const hashParts = location.hash.replace(/^#\//, '').split('/');
@@ -80,35 +79,6 @@ function registerSW() {
 }
 
 // ── Club selector ─────────────────────────────────────────────────
-function renderClubSelector() {
-  const menu = document.getElementById('club-select-menu');
-  menu.innerHTML = clubs.map(c =>
-    `<button class="club-option" role="option" data-id="${esc(c.id)}">
-      <img src="${esc(c.logo)}" alt="" width="18" height="18" class="club-option-logo">
-      ${esc(c.name)}
-    </button>`
-  ).join('');
-
-  document.getElementById('club-select-btn').addEventListener('click', toggleClubMenu);
-  menu.addEventListener('click', e => {
-    const opt = e.target.closest('.club-option');
-    if (opt) selectClub(opt.dataset.id);
-  });
-}
-
-function toggleClubMenu() {
-  const menu = document.getElementById('club-select-menu');
-  const btn = document.getElementById('club-select-btn');
-  const open = menu.hidden;
-  menu.hidden = !open;
-  btn.setAttribute('aria-expanded', String(open));
-}
-
-function closeClubMenu() {
-  document.getElementById('club-select-menu').hidden = true;
-  document.getElementById('club-select-btn').setAttribute('aria-expanded', 'false');
-}
-
 async function selectClub(id, teamOverride = null) {
   currentClub = id;
   localStorage.setItem('hokkarit_club', id);
@@ -119,11 +89,6 @@ async function selectClub(id, teamOverride = null) {
   logoEl.alt = club?.name ?? id;
 
   document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0A1628');
-
-  document.querySelectorAll('.club-option').forEach(o =>
-    o.classList.toggle('active', o.dataset.id === id)
-  );
-  closeClubMenu();
 
   try {
     teams = await fetch(`data/${id}/teams.json`).then(r => r.json());
@@ -155,14 +120,13 @@ function setupTeamSelectorEvents() {
     if (opt) selectTeam(opt.dataset.id);
   });
   document.addEventListener('click', e => {
-    if (!document.getElementById('club-select').contains(e.target)) closeClubMenu();
     if (!document.getElementById('team-select').contains(e.target)) closeTeamMenu();
     if (!document.getElementById('more-menu').contains(e.target)) closeMoreMenu();
     const modal = document.getElementById('stats-modal');
     if (!modal.hidden && !document.getElementById('stats-modal').querySelector('.stats-panel').contains(e.target)) closeStats();
   });
   document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') { closeClubMenu(); closeTeamMenu(); closeMoreMenu(); closeStats(); }
+    if (e.key === 'Escape') { closeTeamMenu(); closeMoreMenu(); closeStats(); }
     if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
     if (e.key === 'ArrowLeft') shiftWeek(-1);
     if (e.key === 'ArrowRight') shiftWeek(1);
