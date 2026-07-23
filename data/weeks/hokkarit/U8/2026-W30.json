@@ -3,6 +3,7 @@
     "monday": {
       "title": "Maanantai",
       "tasks": [
+        "ma",
         "Hypi tasajalkaa 30 kertaa",
         "Heitä pallo ylöspäin ja ota kiinni 10 kertaa"
       ]
@@ -10,12 +11,14 @@
     "tuesday": {
       "title": "Tiistai",
       "tasks": [
+        "ti",
         "Lepopäivä"
       ]
     },
     "wednesday": {
       "title": "Keskiviikko",
       "tasks": [
+        "ke",
         "Mailankäsittely: siirrä kiekko edestakaisin 1 min",
         "Tee 3 kuperkeikkaa"
       ]
@@ -23,12 +26,14 @@
     "thursday": {
       "title": "Torstai",
       "tasks": [
+        "to",
         "Lepopäivä"
       ]
     },
     "friday": {
       "title": "Perjantai",
       "tasks": [
+        "pe",
         "Seiso yhdellä jalalla 20 sek, vaihda jalka",
         "Juokse takapihalla 5 min"
       ]
@@ -36,12 +41,14 @@
     "saturday": {
       "title": "Lauantai",
       "tasks": [
+        "la",
         "Pelaa ulkona kavereiden kanssa 20 min"
       ]
     },
     "sunday": {
       "title": "Sunnuntai",
       "tasks": [
+        "su",
         "Lepopäivä"
       ]
     }

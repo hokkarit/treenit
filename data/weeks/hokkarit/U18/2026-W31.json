@@ -3,56 +3,62 @@
     "monday": {
       "title": "Maanantai",
       "tasks": [
-        "Kyykyt 4 × 20",
-        "Askelkyykyt 3 × 15 kummallakin",
-        "Nordic hamstring 3 × 8",
-        "Hyppynarua 5 min"
+        "ma",
+        "Takakyykyt 5 × 5 (raskas)",
+        "Askelkyykyt 4 × 12 kummallakin",
+        "Nordic hamstring 4 × 10",
+        "Hyppykyykyt 4 × 8"
       ]
     },
     "tuesday": {
       "title": "Tiistai",
       "tasks": [
-        "Mailankäsittely 15 min: nopeat siirrot, taaksepäin ja harhautukset",
-        "Liikkuvuus: lonkat, reidet, olkapäät 15 min"
+        "ti",
+        "Mailankäsittely 20 min täysnopeudella",
+        "Liikkuvuus + venyttely 15 min"
       ]
     },
     "wednesday": {
       "title": "Keskiviikko",
       "tasks": [
-        "Punnerrukset 4 × 20",
-        "Dipsit 4 × 12",
-        "Vatsalihas: 4 × 20 rutistusta",
-        "Sivulankku 3 × 45 sek"
+        "ke",
+        "Penkkipunnerrus tai dipsit 5 × 10",
+        "Leuanveto tai soutu 4 × 10",
+        "Vatsalihas: 5 × 30 + lankku 4 × 70 sek",
+        "Sivulankku 4 × 55 sek"
       ]
     },
     "thursday": {
       "title": "Torstai",
       "tasks": [
-        "Intervallijuoksu: 10 × 30 sek täysillä + 30 sek kävely",
-        "Laukaisuharjoitus: 50 laukausta seinään tai maaliin",
-        "Venyttely 10 min"
+        "to",
+        "Sprinttiharjoitus: 10 × 60 m täysillä, 2 min palautus",
+        "Laukaisuharjoitus: 80 laukausta",
+        "Venyttely + jäähdyttely 15 min"
       ]
     },
     "friday": {
       "title": "Perjantai",
       "tasks": [
-        "Lankku 4 × 60 sek",
-        "Selkälihakset: 3 × 15",
-        "Hyppykyykyt 4 × 10",
-        "Sivulankku 3 × 45 sek"
+        "pe",
+        "Loikat 4 × 30 m, hyppykyykyt 4 × 12, kevennyshypyt 4 × 8",
+        "Selkälihakset: 4 × 15",
+        "Sivulankku 4 × 60 sek"
       ]
     },
     "saturday": {
       "title": "Lauantai",
       "tasks": [
-        "Aerobinen: pyöräily tai uinti 60 min",
-        "Keskivartalo: lankku 60 sek, sivulankku 45 sek, rutistus 20"
+        "la",
+        "Aerobinen: pyöräily tai uinti 80 min",
+        "Keskivartalo: lankku 80 sek, sivulankku 65 sek, rutistus 30"
       ]
     },
     "sunday": {
       "title": "Sunnuntai",
       "tasks": [
-        "Lepopäivä"
+        "su",
+        "Lepopäivä – ravinto ja uni kuntoon"
       ]
     }
   }

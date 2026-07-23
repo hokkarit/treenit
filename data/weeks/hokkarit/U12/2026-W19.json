@@ -1,0 +1,46 @@
+{
+  "days": {
+    "monday": {
+      "title": "Maanantai",
+      "tasks": [
+        "ma"
+      ]
+    },
+    "tuesday": {
+      "title": "Tiistai",
+      "tasks": [
+        "ti"
+      ]
+    },
+    "wednesday": {
+      "title": "Keskiviikko",
+      "tasks": [
+        "ke"
+      ]
+    },
+    "thursday": {
+      "title": "Torstai",
+      "tasks": [
+        "to"
+      ]
+    },
+    "friday": {
+      "title": "Perjantai",
+      "tasks": [
+        "pe"
+      ]
+    },
+    "saturday": {
+      "title": "Lauantai",
+      "tasks": [
+        "la"
+      ]
+    },
+    "sunday": {
+      "title": "Sunnuntai",
+      "tasks": [
+        "su"
+      ]
+    }
+  }
+}

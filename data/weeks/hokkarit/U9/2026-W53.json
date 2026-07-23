@@ -1,0 +1,28 @@
+{
+  "days": {
+    "monday": {
+      "title": "Maanantai",
+      "tasks": [
+        "ma"
+      ]
+    },
+    "tuesday": {
+      "title": "Tiistai",
+      "tasks": [
+        "ti"
+      ]
+    },
+    "wednesday": {
+      "title": "Keskiviikko",
+      "tasks": [
+        "ke"
+      ]
+    },
+    "thursday": {
+      "title": "Torstai",
+      "tasks": [
+        "to"
+      ]
+    }
+  }
+}

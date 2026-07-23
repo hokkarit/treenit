@@ -3,6 +3,7 @@
     "monday": {
       "title": "Maanantai",
       "tasks": [
+        "ma",
         "Kyykyt 3 × 12",
         "Hyppynarua 2 min",
         "Punnerrukset 2 × 8"
@@ -11,19 +12,25 @@
     "tuesday": {
       "title": "Tiistai",
       "tasks": [
+        "ti",
         "Lepopäivä – palaudu hyvin"
       ]
     },
     "wednesday": {
       "title": "Keskiviikko",
       "tasks": [
-        "Mailankäsittely 8 min: rysty ja käänto",
+        "ke",
+        {
+          "text": "Mailankäsittely 8 min: rysty ja käänto",
+          "video": "https://youtu.be/VIDEO_ID"
+        },
         "Vatsalihakset: 3 × 10 rutistusta"
       ]
     },
     "thursday": {
       "title": "Torstai",
       "tasks": [
+        "to",
         "Juoksu: 5 min lämmittely + 4 × 30 sek vauhdikas",
         "Venyttely lonkat ja reidet 8 min"
       ]
@@ -31,6 +38,7 @@
     "friday": {
       "title": "Perjantai",
       "tasks": [
+        "pe",
         "Askelkyykyt 2 × 8 kummallakin jalalla",
         "Lankku 3 × 20 sek"
       ]
@@ -38,12 +46,14 @@
     "saturday": {
       "title": "Lauantai",
       "tasks": [
+        "la",
         "Aerobinen: pyöräily tai uinti 30 min"
       ]
     },
     "sunday": {
       "title": "Sunnuntai",
       "tasks": [
+        "su",
         "Lepopäivä"
       ]
     }
