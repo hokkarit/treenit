@@ -3,8 +3,8 @@
     "monday": {
       "title": "Maanantai",
       "tasks": [
-        "Kyykyt 2 × 8",
-        "Hyppynarua 1 min"
+        "Hypi tasajalkaa 50 kertaa",
+        "Heitä pallo seinään ja ota kiinni 2 min"
       ]
     },
     "tuesday": {
@@ -16,8 +16,8 @@
     "wednesday": {
       "title": "Keskiviikko",
       "tasks": [
-        "Mailankäsittely 3 min: rysty ja käänto",
-        "Tasapaino: seiso yhdellä jalalla 20 sek"
+        "Mailankäsittely: siirrä kiekko puolelta toiselle 2 min",
+        "Tee 5 kuperkeikkaa"
       ]
     },
     "thursday": {
@@ -29,14 +29,14 @@
     "friday": {
       "title": "Perjantai",
       "tasks": [
-        "Juoksu 10 min",
-        "Venyttely jalat 5 min"
+        "Seiso yhdellä jalalla 30 sek, vaihda jalka",
+        "Juokse takapihalla 10 min"
       ]
     },
     "saturday": {
       "title": "Lauantai",
       "tasks": [
-        "Pyöräily tai leikkiä ulkona 20 min"
+        "Pelaa ulkona kavereiden kanssa 30 min"
       ]
     },
     "sunday": {

@@ -1,10 +1,48 @@
 {
   "days": {
+    "monday": {
+      "title": "Maanantai",
+      "tasks": [
+        "Hypi tasajalkaa 30 kertaa",
+        "Heitä pallo ylöspäin ja ota kiinni 10 kertaa"
+      ]
+    },
+    "tuesday": {
+      "title": "Tiistai",
+      "tasks": [
+        "Lepopäivä"
+      ]
+    },
+    "wednesday": {
+      "title": "Keskiviikko",
+      "tasks": [
+        "Mailankäsittely: siirrä kiekko edestakaisin 1 min",
+        "Tee 3 kuperkeikkaa"
+      ]
+    },
     "thursday": {
       "title": "Torstai",
       "tasks": [
-        "Ylävartalon voima: punnerrukset 4 × 15, dipsit 3 × 10",
-        "Vatsalihas: 3 × 20 rutistusta, 3 × 30 sek sivulankku"
+        "Lepopäivä"
+      ]
+    },
+    "friday": {
+      "title": "Perjantai",
+      "tasks": [
+        "Seiso yhdellä jalalla 20 sek, vaihda jalka",
+        "Juokse takapihalla 5 min"
+      ]
+    },
+    "saturday": {
+      "title": "Lauantai",
+      "tasks": [
+        "Pelaa ulkona kavereiden kanssa 20 min"
+      ]
+    },
+    "sunday": {
+      "title": "Sunnuntai",
+      "tasks": [
+        "Lepopäivä"
       ]
     }
   }

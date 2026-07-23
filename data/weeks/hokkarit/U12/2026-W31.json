@@ -3,46 +3,46 @@
     "monday": {
       "title": "Maanantai",
       "tasks": [
-        "Kyykyt 4 × 12",
-        "Askelkyykyt 3 × 10 kummallakin",
-        "Hyppynarua 3 min"
+        "Kyykyt 4 × 15",
+        "Askelkyykyt 3 × 12 kummallakin",
+        "Hyppynarua 4 min"
       ]
     },
     "tuesday": {
       "title": "Tiistai",
       "tasks": [
-        "Mailankäsittely 8 min: rysty, käänto ja taaksepäin",
-        "Liikkuvuus: lonkat ja reidet 8 min"
+        "Mailankäsittely 10 min: nopeat siirrot ja taaksepäin",
+        "Liikkuvuus: lonkat ja reidet 10 min"
       ]
     },
     "wednesday": {
       "title": "Keskiviikko",
       "tasks": [
-        "Punnerrukset 3 × 12",
-        "Dipsit 3 × 8",
-        "Vatsalihas: 3 × 15 rutistusta",
-        "Sivulankku 3 × 25 sek"
+        "Punnerrukset 4 × 15",
+        "Dipsit 3 × 10",
+        "Vatsalihas: 3 × 20 rutistusta",
+        "Sivulankku 3 × 30 sek"
       ]
     },
     "thursday": {
       "title": "Torstai",
       "tasks": [
-        "Intervallijuoksu: 6 × 30 sek täysillä + 30 sek kävely",
+        "Intervallijuoksu: 8 × 30 sek täysillä + 30 sek kävely",
         "Venyttely koko keho 10 min"
       ]
     },
     "friday": {
       "title": "Perjantai",
       "tasks": [
-        "Lankku 3 × 35 sek",
-        "Selkälihakset: 3 × 12",
-        "Hyppykyykyt 3 × 8"
+        "Lankku 3 × 45 sek",
+        "Selkälihakset: 3 × 15",
+        "Hyppykyykyt 3 × 10"
       ]
     },
     "saturday": {
       "title": "Lauantai",
       "tasks": [
-        "Aerobinen: pyöräily tai uinti 40 min"
+        "Aerobinen: pyöräily tai uinti 50 min"
       ]
     },
     "sunday": {
