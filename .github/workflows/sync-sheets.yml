@@ -1,0 +1,27 @@
+name: Sync challenges from Google Sheets
+
+on:
+  schedule:
+    - cron: '0 4 * * 1'   # Every Monday at 04:00 UTC
+  workflow_dispatch:        # Allow manual trigger from GitHub UI
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch challenges from Google Sheets
+        run: python3 scripts/sync_sheets.py
+
+      - name: Commit updated week files
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/weeks/
+          git diff --cached --quiet && echo "No changes" || \
+            git commit -m "chore: sync challenges from Google Sheets [skip ci]"
+          git push

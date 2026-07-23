@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0A1628">
+  <meta name="description" content="Hokkarit-junioreiden viikkotehtävät ja haasteet">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Kotitreenit">
+  <link rel="apple-touch-icon" id="apple-touch-icon" href="https://static.jopox.fi/hokkarit/logos/logo-300.png">
+  <title>Hokkarit Kotitreenit</title>
+  <link rel="manifest" id="manifest-link" href="/manifest-hokkarit.json">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="topbar-main">
+      <div class="brand">
+        <div class="club-select" id="club-select">
+          <button class="club-select-btn" id="club-select-btn" aria-haspopup="listbox" aria-expanded="false" aria-label="Valitse seura">
+            <img id="club-logo" class="logo" src="" alt="" width="32" height="32">
+            <span class="brand-name">Kotitreenit</span>
+            <svg class="chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+              <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="club-select-menu" id="club-select-menu" hidden role="listbox"></div>
+        </div>
+      </div>
+
+      <div class="topbar-right">
+        <button class="today-btn" id="today-btn" onclick="goToToday()" aria-label="Tänään" title="Tänään">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="3" width="12" height="11" rx="2"/>
+            <path d="M2 7h12M5 1v4M11 1v4"/>
+            <circle cx="8" cy="11" r="1.2" fill="currentColor" stroke="none"/>
+          </svg>
+        </button>
+
+        <div class="team-select" id="team-select">
+          <button class="team-select-btn" id="team-select-btn" aria-haspopup="listbox" aria-expanded="false">
+            <span id="team-select-label">—</span>
+            <svg class="chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+              <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="team-select-menu" id="team-select-menu" hidden role="listbox"></div>
+        </div>
+
+        <div class="more-menu" id="more-menu">
+          <button class="more-btn" id="more-btn" aria-haspopup="menu" aria-expanded="false" aria-label="Lisää toimintoja">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+              <circle cx="2" cy="8" r="1.5"/><circle cx="8" cy="8" r="1.5"/><circle cx="14" cy="8" r="1.5"/>
+            </svg>
+          </button>
+          <div class="more-menu-items" id="more-menu-items" hidden role="menu">
+            <button class="more-option" role="menuitem" onclick="showStats(event)">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="8" width="3" height="5" rx="1"/><rect x="5.5" y="5" width="3" height="8" rx="1"/><rect x="10" y="2" width="3" height="11" rx="1"/></svg>
+              Tilastot
+            </button>
+            <button class="more-option" role="menuitem" onclick="copyWeekLink()">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.5 8.5a3 3 0 004.2 0l2-2a3 3 0 00-4.2-4.2l-1 1"/><path d="M8.5 5.5a3 3 0 00-4.2 0l-2 2a3 3 0 004.2 4.2l1-1"/></svg>
+              Kopioi viikkolinkki
+            </button>
+            <button class="more-option" role="menuitem" onclick="exportProgress()">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 1v8M4 6l3 3 3-3M1 10v1a2 2 0 002 2h8a2 2 0 002-2v-1"/></svg>
+              Vie tiedot
+            </button>
+            <button class="more-option" role="menuitem" onclick="document.getElementById('import-file').click()">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 9V1M4 4l3-3 3 3M1 10v1a2 2 0 002 2h8a2 2 0 002-2v-1"/></svg>
+              Tuo tiedot
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <input type="file" id="import-file" accept=".json" hidden>
+
+    <div class="week-nav">
+      <button class="week-btn" onclick="shiftWeek(-1)" aria-label="Edellinen viikko">&#8592;</button>
+      <div class="week-info">
+        <span id="week-label">Viikko —</span>
+        <span id="week-dates"></span>
+      </div>
+      <button class="week-btn" onclick="shiftWeek(1)" aria-label="Seuraava viikko">&#8594;</button>
+    </div>
+  </header>
+
+  <main id="days-container">
+    <div class="loading"><div class="spinner"></div>Ladataan…</div>
+  </main>
+
+  <!-- Statistics modal -->
+  <div id="stats-modal" class="stats-modal" hidden role="dialog" aria-label="Tilastot">
+    <div class="stats-panel">
+      <div class="stats-header">
+        <h2>Tilastot</h2>
+        <button class="stats-close" onclick="closeStats()" aria-label="Sulje">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13"/></svg>
+        </button>
+      </div>
+      <p id="stats-summary" class="stats-summary"></p>
+      <ul class="stats-list" id="stats-list"></ul>
+    </div>
+  </div>
+
+  <div id="notif-banner" class="notif-banner hidden" role="dialog" aria-label="Ilmoituspyyntö">
+    <p><span>🏒</span> Haluatko saada muistutuksen joka aamu klo 9?</p>
+    <div class="notif-actions">
+      <button class="notif-btn-yes" onclick="requestNotifPermission()">Kyllä, muistuta!</button>
+      <button class="notif-btn-no" onclick="dismissNotifBanner()">Ei kiitos</button>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" aria-live="polite"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
