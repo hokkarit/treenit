@@ -402,15 +402,6 @@ main {
   border: 1.5px solid var(--border);
   overflow: hidden;
   transition: border-color 0.2s;
-  scroll-margin-top: 120px;
-}
-
-html.pwa-ios .day-card {
-  scroll-margin-top: calc(120px + env(safe-area-inset-top, 0px));
-}
-
-@media (display-mode: standalone) {
-  .day-card { scroll-margin-top: calc(120px + env(safe-area-inset-top, 0px)); }
 }
 
 .day-card.today {

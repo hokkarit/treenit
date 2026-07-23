@@ -299,7 +299,12 @@ function renderDays(data, wk, repeatedFrom = null) {
 
   const todayCard = container.querySelector('.today');
   if (todayCard) {
-    setTimeout(() => todayCard.scrollIntoView({ behavior: 'smooth', block: 'start' }), 80);
+    setTimeout(() => {
+      const topbar = document.querySelector('.topbar');
+      const offset = (topbar ? topbar.offsetHeight : 0) + 8;
+      const top = todayCard.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }, 80);
   }
 }
 
