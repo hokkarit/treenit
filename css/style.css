@@ -89,6 +89,12 @@ html.pwa-ios .topbar {
   flex-shrink: 0;
 }
 
+.brand-static {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .logo {
   width: 32px;
   height: 32px;
@@ -396,6 +402,15 @@ main {
   border: 1.5px solid var(--border);
   overflow: hidden;
   transition: border-color 0.2s;
+  scroll-margin-top: 120px;
+}
+
+html.pwa-ios .day-card {
+  scroll-margin-top: calc(120px + env(safe-area-inset-top, 0px));
+}
+
+@media (display-mode: standalone) {
+  .day-card { scroll-margin-top: calc(120px + env(safe-area-inset-top, 0px)); }
 }
 
 .day-card.today {
