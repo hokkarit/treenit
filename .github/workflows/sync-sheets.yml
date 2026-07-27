@@ -2,7 +2,7 @@ name: Sync challenges from Google Sheets
 
 on:
   schedule:
-    - cron: '0 4 * * 1'   # Every Monday at 04:00 UTC
+    - cron: '0 */3 * * *'  # Every 3 hours
   workflow_dispatch:        # Allow manual trigger from GitHub UI
 
 permissions:

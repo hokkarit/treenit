@@ -1,4 +1,7 @@
 *.pyc 
+.claude/
+.DS_Store
+Thumbs.db
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
