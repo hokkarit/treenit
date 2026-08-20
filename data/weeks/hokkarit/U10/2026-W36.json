@@ -3,28 +3,34 @@
     "monday": {
       "title": "Maanantai",
       "tasks": [
-        "Lankkupitohaaste, 30 sec",
-        "Kyykkyasennossa 30 sec"
+        "Pyöräily tai potkulautailu"
       ]
     },
     "tuesday": {
       "title": "Tiistai",
       "tasks": [
-        "Tennispallonheitto kaverin kanssa, molemmilla käsillä",
-        "Haltuunotot myös molemmilla käsillä"
+        "Mailalla ja pallolla kikkailu",
+        "Pomputtele palloa lavan päällä, koita rikkoa ennätyksesi"
+      ]
+    },
+    "wednesday": {
+      "title": "Keskiviikko",
+      "tasks": [
+        "5 kuperkeikkaa",
+        "5 takaperinkuperkeikkaa"
       ]
     },
     "thursday": {
       "title": "Torstai",
       "tasks": [
-        "Pomputtelu, koita rikkoa oma ennätys",
-        "Pilkkukisa kaverin kanssa"
+        "Yhden jalan seisonta 1 min, välillä pientä kyykkyä",
+        "Koita sama silmät kiinni"
       ]
     },
     "friday": {
       "title": "Perjantai",
       "tasks": [
-        "Haasta äiti tai iskä, Punnerruskisa"
+        "Haasta äiti tai iskä, lankkupito kisa"
       ]
     },
     "saturday": {
