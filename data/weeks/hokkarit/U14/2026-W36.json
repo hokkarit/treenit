@@ -9,7 +9,14 @@
     "wednesday": {
       "title": "Keskiviikko",
       "tasks": [
+        "Pistoolikyykyn kokeileminen, mene niin kyykkyyn yhdellä jalalla kuin pääset",
         "Pistoolikyykyn kokeileminen, mene niin kyykkyyn yhdellä jalalla kuin pääset"
+      ]
+    },
+    "thursday": {
+      "title": "Torstai",
+      "tasks": [
+        "100 lihaskuntoliikettä"
       ]
     },
     "saturday": {
