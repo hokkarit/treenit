@@ -1,0 +1,40 @@
+{
+  "days": {
+    "monday": {
+      "title": "Maanantai",
+      "tasks": [
+        "Kopittelua, koita ottaa pallo kiinni myös vasemmalla kädellä"
+      ]
+    },
+    "tuesday": {
+      "title": "Tiistai",
+      "tasks": [
+        "Eläinkävelyt, kulje eläinkävelyillä kotona (karhu, rapu, kääpiö)"
+      ]
+    },
+    "wednesday": {
+      "title": "Keskiviikko",
+      "tasks": [
+        "Pomputtele jääkiekkomailan päällä palloa, koita saada 5 kertaa putkeen"
+      ]
+    },
+    "thursday": {
+      "title": "Torstai",
+      "tasks": [
+        "Piilosta ulkona"
+      ]
+    },
+    "saturday": {
+      "title": "Lauantai",
+      "tasks": [
+        "Pihapelit/leikit kavereiden kanssa"
+      ]
+    },
+    "sunday": {
+      "title": "Sunnuntai",
+      "tasks": [
+        "Seikkailusunnuntai, etsi luonnosta jotain vihreää, pehmeää ja pyöreää"
+      ]
+    }
+  }
+}

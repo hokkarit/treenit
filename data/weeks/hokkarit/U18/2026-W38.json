@@ -1,0 +1,28 @@
+{
+  "days": {
+    "monday": {
+      "title": "Maanantai",
+      "tasks": [
+        "Kuntopiiripäivä, 100 vatsaa, 40 punnerrusta"
+      ]
+    },
+    "wednesday": {
+      "title": "Keskiviikko",
+      "tasks": [
+        "Punttipäivä"
+      ]
+    },
+    "friday": {
+      "title": "Perjantai",
+      "tasks": [
+        "Punttipäivä"
+      ]
+    },
+    "sunday": {
+      "title": "Sunnuntai",
+      "tasks": [
+        "Sunnutailenkki, pyörällä tai hölkällä 40 min"
+      ]
+    }
+  }
+}

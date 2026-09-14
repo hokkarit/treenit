@@ -1,0 +1,34 @@
+{
+  "days": {
+    "monday": {
+      "title": "Maanantai",
+      "tasks": [
+        "Pomputtelua jalkapallolla, koita rikkoa ennätys"
+      ]
+    },
+    "tuesday": {
+      "title": "Tiistai",
+      "tasks": [
+        "Laukomista, ammu 70 kiekkoa"
+      ]
+    },
+    "wednesday": {
+      "title": "Keskiviikko",
+      "tasks": [
+        "Hippaa kavereiden kanssa"
+      ]
+    },
+    "thursday": {
+      "title": "Torstai",
+      "tasks": [
+        "Kuperkeikkoja 5 kpl"
+      ]
+    },
+    "saturday": {
+      "title": "Lauantai",
+      "tasks": [
+        "Pihapelit/leikit kavereiden kanssa"
+      ]
+    }
+  }
+}
