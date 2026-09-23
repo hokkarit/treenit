@@ -1,0 +1,35 @@
+{
+  "days": {
+    "tuesday": {
+      "title": "Tiistai",
+      "tasks": [
+        "Punnerruskisa äitin tai isän kanssa"
+      ]
+    },
+    "wednesday": {
+      "title": "Keskiviikko",
+      "tasks": [
+        "Pallon ja mailan kanssa kikkailu",
+        "Lauo 100 kiekkoa jos mahdollista"
+      ]
+    },
+    "friday": {
+      "title": "Perjantai",
+      "tasks": [
+        "Jalkapallolla pomputtelu, riko oma ennätys"
+      ]
+    },
+    "saturday": {
+      "title": "Lauantai",
+      "tasks": [
+        "Pelipäivä, kavereiden kanssa pihapelit (säbä, futis)"
+      ]
+    },
+    "sunday": {
+      "title": "Sunnuntai",
+      "tasks": [
+        "Pelipäivä, kavereiden kanssa pihapelit (säbä, futis)"
+      ]
+    }
+  }
+}

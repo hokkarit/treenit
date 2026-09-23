@@ -1,0 +1,38 @@
+{
+  "days": {
+    "monday": {
+      "title": "Maanantai",
+      "tasks": [
+        "Yhden jalan seisonta, koita saada 30 sec",
+        "Tee sama silmät kiinni, jos haluat haastetta"
+      ]
+    },
+    "wednesday": {
+      "title": "Keskiviikko",
+      "tasks": [
+        "Pomputtele jalkapallolla, koita rikkoa oma ennätys",
+        "Yhdellä jalalla pomputtelu 5 kertaa putkeen"
+      ]
+    },
+    "thursday": {
+      "title": "Torstai",
+      "tasks": [
+        "Mailalla ja pallolla pomputtelu, koita rikkoa oma ennätys",
+        "Mailan ja pallon kanssa kikkailu, käy säbä tai lätkä maila"
+      ]
+    },
+    "friday": {
+      "title": "Perjantai",
+      "tasks": [
+        "Pelipäivä, kavereiden kanssa pihapelit(säbä,futis)"
+      ]
+    },
+    "saturday": {
+      "title": "Lauantai",
+      "tasks": [
+        "15 koria koripallolla",
+        "Pomputtele koripalloa kiertäen omaa vartaloa 10 kierrosta"
+      ]
+    }
+  }
+}

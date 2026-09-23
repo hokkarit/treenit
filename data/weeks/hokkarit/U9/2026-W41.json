@@ -1,0 +1,36 @@
+{
+  "days": {
+    "monday": {
+      "title": "Maanantai",
+      "tasks": [
+        "Liiku kotona eläinliikkeillä paikasta toiseen. (rapu, karhu, kääpiö)"
+      ]
+    },
+    "tuesday": {
+      "title": "Tiistai",
+      "tasks": [
+        "5 kuperkeikkaa",
+        "5 takaperin kuperkeikkaa"
+      ]
+    },
+    "thursday": {
+      "title": "Torstai",
+      "tasks": [
+        "Pilkkukisa kaverin kanssa",
+        "Pomputtelukisat kaverin kanssa"
+      ]
+    },
+    "friday": {
+      "title": "Perjantai",
+      "tasks": [
+        "Hyppypäivä, koita päivän aikana tehdä paljon hyppyjä liikkuessa"
+      ]
+    },
+    "saturday": {
+      "title": "Lauantai",
+      "tasks": [
+        "Pelipäivä, kavereiden kanssa pihapelit (säbä, futis)"
+      ]
+    }
+  }
+}

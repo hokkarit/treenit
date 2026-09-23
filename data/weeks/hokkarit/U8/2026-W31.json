@@ -1,0 +1,49 @@
+{
+  "days": {
+    "monday": {
+      "title": "Maanantai",
+      "tasks": [
+        "Hypi tasajalkaa 50 kertaa",
+        "Heitä pallo seinään ja ota kiinni 2 min"
+      ]
+    },
+    "tuesday": {
+      "title": "Tiistai",
+      "tasks": [
+        "Lepopäivä"
+      ]
+    },
+    "wednesday": {
+      "title": "Keskiviikko",
+      "tasks": [
+        "Mailankäsittely: siirrä kiekko puolelta toiselle 2 min",
+        "Tee 5 kuperkeikkaa"
+      ]
+    },
+    "thursday": {
+      "title": "Torstai",
+      "tasks": [
+        "Lepopäivä"
+      ]
+    },
+    "friday": {
+      "title": "Perjantai",
+      "tasks": [
+        "Seiso yhdellä jalalla 30 sek, vaihda jalka",
+        "Juokse takapihalla 10 min"
+      ]
+    },
+    "saturday": {
+      "title": "Lauantai",
+      "tasks": [
+        "Pelaa ulkona kavereiden kanssa 30 min"
+      ]
+    },
+    "sunday": {
+      "title": "Sunnuntai",
+      "tasks": [
+        "Lepopäivä"
+      ]
+    }
+  }
+}

@@ -6,16 +6,22 @@
         "Kuntopiiripäivä, 100 vatsaa, 40 punnerrusta"
       ]
     },
-    "wednesday": {
-      "title": "Keskiviikko",
+    "tuesday": {
+      "title": "Tiistai",
       "tasks": [
         "Punttipäivä"
       ]
     },
-    "friday": {
-      "title": "Perjantai",
+    "thursday": {
+      "title": "Torstai",
       "tasks": [
         "Punttipäivä"
+      ]
+    },
+    "saturday": {
+      "title": "Lauantai",
+      "tasks": [
+        "Sulkis/tennis/joku mailapeli kaverin kanssa"
       ]
     },
     "sunday": {

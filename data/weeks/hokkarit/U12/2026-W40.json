@@ -1,0 +1,43 @@
+{
+  "days": {
+    "monday": {
+      "title": "Maanantai",
+      "tasks": [
+        "Lankkupitohaaste, 30 sec",
+        "Kyykkyasennossa 30 sec"
+      ]
+    },
+    "tuesday": {
+      "title": "Tiistai",
+      "tasks": [
+        "Tennispallonheitto kaverin kanssa, molemmilla käsillä",
+        "Haltuunotot myös molemmilla käsillä"
+      ]
+    },
+    "thursday": {
+      "title": "Torstai",
+      "tasks": [
+        "Pomputtelu, koita rikkoa oma ennätys",
+        "Pilkkukisa kaverin kanssa"
+      ]
+    },
+    "friday": {
+      "title": "Perjantai",
+      "tasks": [
+        "Haasta äiti tai iskä, Punnerruskisa"
+      ]
+    },
+    "saturday": {
+      "title": "Lauantai",
+      "tasks": [
+        "Pelipäivä, kavereiden kanssa pihapelit (säbä, futis)"
+      ]
+    },
+    "sunday": {
+      "title": "Sunnuntai",
+      "tasks": [
+        "Pelipäivä, kavereiden kanssa pihapelit (säbä, futis)"
+      ]
+    }
+  }
+}
